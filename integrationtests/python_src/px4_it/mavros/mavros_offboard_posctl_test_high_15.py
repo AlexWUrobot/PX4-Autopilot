@@ -173,7 +173,7 @@ class MavrosOffboardPosctlTest(MavrosTestCommon):
         rospy.loginfo("run mission")
         #positions = ((0, 0, 0), (50, 50, 20), (50, -50, 20), (-50, -50, 20),
         #             (0, 0, 20))
-        positions = ((0, 0, 0), (0, 0, 1), (1, 0, 1), (0, 0, 1))
+        positions = ((0, 0, 0), (0, 0, 15), (4, 0, 15), (0, 0, 15))
 
 
         for i in xrange(len(positions)):

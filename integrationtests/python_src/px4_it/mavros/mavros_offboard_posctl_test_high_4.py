@@ -68,7 +68,7 @@ class MavrosOffboardPosctlTest(MavrosTestCommon):
         super(MavrosOffboardPosctlTest, self).setUp()
 
         self.pos = PoseStamped()
-        self.radius = 1
+        self.radius = 0.5
 
         self.pos_setpoint_pub = rospy.Publisher(
             'mavros/setpoint_position/local', PoseStamped, queue_size=1)
@@ -173,7 +173,7 @@ class MavrosOffboardPosctlTest(MavrosTestCommon):
         rospy.loginfo("run mission")
         #positions = ((0, 0, 0), (50, 50, 20), (50, -50, 20), (-50, -50, 20),
         #             (0, 0, 20))
-        positions = ((0, 0, 0), (0, 0, 1), (1, 0, 1), (0, 0, 1))
+        positions = ((0, 0, 0), (0, 0, 2), (4, 0, 2), (0, 0, 2))
 
 
         for i in xrange(len(positions)):
